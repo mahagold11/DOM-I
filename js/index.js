@@ -40,3 +40,51 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// // ## Task 1: Create selectors to point your data into elements
+// * [ ] Create selectors by using any of the DOM element's methods
+
+// * [x] Note that IDs have been used on all images.  Use the IDs to update src path content
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+// ## Task 2: Update the HTML with the JSON data
+// * [ ] Remember, NO direct updating of the HTML source is allowed.
+// * [ ] Using your selectors, update the content to match the example file.
+// * [x] Remember to update the src attributes on images
+
+// Navigation
+let navA = document.querySelectorAll('a');
+
+const values = Object.values(siteContent.nav);
+
+for (let i = 0; i < navA.length; i++) {
+   navA[i].textContent = values[i];
+}
+
+// CTA
+// h1
+let ctaH1 = document.querySelector('div.cta-text > h1');
+ctaH1.textContent = siteContent["cta"]["h1"];
+
+// button
+let ctaButton = document.querySelector('div.cta-text > button');
+ctaButton.textContent = siteContent["cta"]["button"];
+
+// Main Content
+// top-content
+
+let multipleTextContent = document.querySelectorAll('#text-content');
+multipleTextContent[0].
+
+
+// let topContentH4 = document.querySelector('div.text-content > h4');
+// topContentH4.textContent = siteContent["main-content"]["about-h4"];
+
+// let topContentP = document.querySelector("div.text-content > p");
+// topContentP.textContent = siteContent["main-content"]["about-content"];
+
